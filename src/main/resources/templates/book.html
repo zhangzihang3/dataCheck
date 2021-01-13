@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:text="${#httpServletRequest.getAttribute('book')}"></div>
+<div th:text="${#httpServletRequest.getAttribute('date')}"></div>
+<div th:text="${#httpServletRequest.getAttribute('boolean')}"></div>
+这里是登录页面
+<form action="bookDo" method="post">
+    id:<input type="text" name="id">
+    name:<input type="text" name="name">
+    date:<input type="text" name="date">
+    <input type="submit">
+</form>
+<br/>
+<form action="date" method="post">
+    date:<input type="text" name="date">
+    <input type="submit">
+</form>
+<br/>
+<form action="boolean" method="post">
+    boolean:<input type="text" name="b">
+    <input type="submit">
+</form>
+
+</body>
+</html>
